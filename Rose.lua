@@ -98,13 +98,11 @@ ParkourFarm.Activated:Connect(function()
 	print("hi")
 	if pfarm == 0 then
 		pfarm = 1
+				game.Players.LocalPlayer.Character.Head.Anchored = true
+
 	else
 		pfarm = 0
 		game.Players.LocalPlayer.Character.Head.Anchored = false
 	end
 	print("pfarm: "..tostring(pfarm))
-	while pfarm ~= 0 do 
-		wait(0.1)
-		game.Players.LocalPlayer.Character.Head.Anchored = true		
-	end
 end)
